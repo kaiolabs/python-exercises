@@ -79,3 +79,15 @@ print("Temos %d frutas no inventario."%(total))
 
 # # print(dicEspecies)
 
+
+
+
+# for x in range(0, 3):
+#         n = int(input("Digite o {}° valor: ".format(x+1)))
+#         # y = list(dicionario["Campo2"])
+#         # y.append(n)
+#         # dicionario["Campo2"] = tuple(y)
+
+#         y = list(dicionario["Campo2"])
+#         y[x] = n
+#         dicionario["Campo2"] = tuple(y)
