@@ -52,7 +52,7 @@ while True:
 
             if infoConta in contas.keys():
                 os.system('cls') or None
-                addSaldo = float(input("Digite o valor que deseja adicionar: "))
+                addSaldo = float(input("Digite o valor que deseja retirar: "))
                 if addSaldo < contas[infoConta][4]:
                     contas[infoConta][4] = contas[infoConta][4] - addSaldo
                     os.system('cls') or None
