@@ -1,11 +1,21 @@
+import modulos
+
 quantidadeIOS = 0
 quantidadeAPK = 0
 somaIdade = 0
 
 while True:
 
-    idade = int(input("\nDigite sua idade: "))
-    sistemaOperacional = str(input("Qual sistema operacional você usa (IOS ou ANDROID): ")).upper()
+    try:
+        idade = int(input("\nDigite sua idade: "))
+        if (idade > 125 or idade <= 0):
+            print("Idade invalida!")
+            continue
+    except ValueError:
+        print("\nIdade invalida!")
+        continue
+
+    sistemaOperacional = modulos.Normalizador("Qual sistema operacional você usa (IOS ou ANDROID): ")
 
     if(sistemaOperacional == "IOS"):
         quantidadeIOS = quantidadeIOS + 1
@@ -17,12 +27,11 @@ while True:
         print("\nO sistema operacional informado está incorreto! Por favor prenha os dados novamente.\n")
         continue
 
-    continuar = str(input("Deseja cadastrar mais dados (S/N): ")).upper()
-
+    continuar = modulos.Normalizador("Deseja cadastrar mais dados (S/N): ")
     if(continuar == "N"):
         break
 
 totalDePessoas = quantidadeIOS + quantidadeAPK
-media = somaIdade / totalDePessoas
+media = modulos.Media(somaIdade, totalDePessoas)
 
-print("\n{}\n\nNúmero de entrevistados: {}\n\nTotal de usuários de IOS: {}\n\nTotal de usuários de ANDROID: {}\n\nIdade média dos entrevistados: {}\n\n{}\n\n".format(40*"=", totalDePessoas, quantidadeIOS, quantidadeAPK, media, 40*"="))
+print("\n{}\n\nNúmero de entrevistados: {}\n\nTotal de usuários de IOS: {}\n\nTotal de usuários de ANDROID: {}\n\nIdade média dos entrevistados: {:.2f}\n\n{}\n\n".format(40*"=", totalDePessoas, quantidadeIOS, quantidadeAPK, media, 40*"="))
