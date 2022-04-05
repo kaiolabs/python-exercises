@@ -42,8 +42,7 @@ class vetorNaoOrdenado:
                     return
             print("O valor", valor, "não foi encontrado")
 
-
-
+    
 
 vetor = vetorNaoOrdenado(5)
 
