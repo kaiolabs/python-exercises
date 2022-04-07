@@ -22,6 +22,7 @@ def statusGame(tentativas):
     return print(f'\nSTATUS DA PARTIDA: {resp}')
 
 def main():
+    
     print(f'\n{18 * "=="}\n\nBem vindo ao jogo de adivinhação!\n\n{18 * "=="}\n')
 
     cont = 0

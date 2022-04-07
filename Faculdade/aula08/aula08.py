@@ -46,7 +46,7 @@ class vetorNaoOrdenado:
 
 vetor = vetorNaoOrdenado(5)
 
-vetor.inserir(1)
+vetor.inserir('kaio')
 vetor.inserir(2)
 vetor.inserir(3)
 vetor.inserir(4)
