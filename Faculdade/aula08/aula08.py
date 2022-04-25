@@ -1,5 +1,6 @@
 import numpy as np
 
+
 class vetorNaoOrdenado:
     def __init__(self, capacidade):
         self.capacidade = capacidade
@@ -11,7 +12,7 @@ class vetorNaoOrdenado:
             print("O vetor está vazio")
         else:
             for i in range(self.utimaPosicao + 1):
-                print(i, ' - ' , self.valores[i])
+                print(i, ' - ', self.valores[i])
 
     def inserir(self, valor):
         if self.utimaPosicao == self.capacidade - 1:
@@ -42,7 +43,22 @@ class vetorNaoOrdenado:
                     return
             print("O valor", valor, "não foi encontrado")
 
-    
+    # Buscar binária por um valor.
+
+    def busca_binaria(self, valor):
+        inicio = 0
+        fim = self.ultimaPosicao
+        while inicio <= fim:
+            meio = int((fim + inicio) / 2)  # Encontra a posição do meio.
+        if self.valores[meio] == valor:
+            return meio
+        # Se valor menor do que o valor que está no meio, reposiciona o marcador do fim.
+        elif valor < self.valores[meio]:
+            fim = meio - 1
+        else:
+            inicio = meio + 1
+        return -1
+
 
 vetor = vetorNaoOrdenado(5)
 
@@ -60,12 +76,3 @@ vetor.remover(2)
 
 vetor.imprimir()
 
-    
-
-    
-
-    
-
-    
-
-    
