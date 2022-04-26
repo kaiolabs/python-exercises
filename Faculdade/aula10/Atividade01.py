@@ -70,7 +70,6 @@ class VetorNaoOrdenado:
       else:
         inicio = meio + 1 
     return -1
-
   
   # Ordena o vetor pelo método Bubble Sort.
   # O princípio do Bubble Sort é a troca entre posições consecutivas, fazendo com que valores mais altos (ou mais baixos) "borbulhem" para o final do vetor.
